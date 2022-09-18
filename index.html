@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body onkeypress="buscar_letra(event)">
+    <div id="__content">
+        <div id="__win__1" class="__window">
+            <div class="flex_column_center">
+                <p class="__botones" onclick="show__page(3), iniciar__juego('')">Jugar Ahora</p>
+                <p class="__botones" onclick="show__page(2)">Ingresar una palabra</p>
+            </div>
+        </div>
+        <div id="__win__2" class="__window">
+            <div class="flex_column_center">
+                <input id="txtNuevaPalabra" type="text" placeholder="Max. 10 caracteres" autofocus>
+                <p class="__botones" onclick="show__page(3), lanzar__palabra()">Guardar y empezar!</p>
+                <p class="__botones" onclick="show__page(1)">Retornar</p>
+            </div>
+        </div>
+        <div id="__win__3" class="__window">
+            <canvas id="__ahorcado" style="background-color: white"></canvas>
+            <canvas id="__pizarra" style="background-color: white; margin-top: 20px"></canvas>
+            <h2>Dígite una letra</h2>
+            <p id="__lblErrores">
+                <!-- AQUI CARACTERES ERRADOS-->
+            </p>
+        </div>
+        <div id="__win__4" class="__window">
+            <div>
+                <p>Perdiste :(</p>
+                <p class="__botones" onclick="show__page(1)">Retornar</p>
+            </div>
+        </div>
+        <div id="__win__5" class="__window">
+            <div>
+                <p>Ganaste :)</p>
+                <p class="__botones" onclick="show__page(1)">Retornar</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="manage.js"></script>
+    <h3 style="position: fixed; left: 10px; bottom: 0px; z-index:3">Desarrollado por Carlos Colque :)</h3>
+</body>
+</html>
