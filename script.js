@@ -51,6 +51,7 @@ function lanzar__palabra() {
     let w = document.getElementById('txtNuevaPalabra').value;
     default_word = w.toString().toUpperCase();
     // Lanzar
+    document.getElementById('txtNuevaPalabra').value = '';
     iniciar__juego(default_word);
 }
 function definir__arreglo__graficar(xPalabra) {
@@ -76,8 +77,9 @@ function iniciar__juego(xWord) {
     // DEFINIR PALABRA A JUGAR
     if (xWord.length === 0) {
         // ELEGIR PALABRA AL AZAR
-        let rndIndex = Math.floor(Math.random() * (list_words.length - 1));
+        let rndIndex = Math.floor(Math.random() * (list_words.length));
         default_word = list_words[rndIndex];
+        console.log(default_word);
     } else {
         default_word = xWord;
     }
